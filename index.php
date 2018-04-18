@@ -1,9 +1,17 @@
 <?php 
-
-include_once 'partials/head.php';
+require 'partials/session_start.php';
+require_once 'partials/head.php';
 include_once 'partials/navbar.php';
-
+require 'classes/UserCheck.php';
+$user = new User();
+var_dump($user->isLoggedIn());
 // require 'session_start.php';
+if ($user->isLoggedIn()) { 
+    include_once 'partials/get_all_entries.php'; 
+} else {
+    include_once 'partials/head.php';
+    include_once 'partials/navbar.php';
+}
 
 // require_once 'partials/database.php';
 // require_once 'partials/login.php';
@@ -20,6 +28,7 @@ include_once 'partials/navbar.php';
 
 
  ?>
+
 
 
 

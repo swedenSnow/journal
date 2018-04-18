@@ -12,10 +12,7 @@ if(isset($_POST['submit'])){
     if (password_verify($_POST["password"], $user["password"])) {
         // Redirect to the index page on sucessful login
         header('Location: ../index.php?message=Login-success');
-        $_SESSION["loggedIn"] = true;
-        $_SESSION["username"] = $user["username"];
-        $_SESSION["userID"] = $user["userID"];
-        session_set_cookie_params(3600);
+       
         
     } else {
         /**
@@ -23,7 +20,16 @@ if(isset($_POST['submit'])){
          * an error message or something that indicates what has gone wrong
          */
         header('Location: ../index.php?message=Login-Failed');
+        require_once 'navbar.php';
         
     }
     
 }
+
+
+
+?>
+
+
+ 
+

@@ -1,6 +1,6 @@
 <?php
 //Fail :/
-require_once '/partials/database.php';
+require_once 'partials/database.php';
 class User
 {
 
