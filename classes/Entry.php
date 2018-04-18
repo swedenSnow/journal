@@ -23,19 +23,16 @@ class Entry
   }
   public function removeEntry($entryID){
     $sql=  "DELETE FROM entries WHERE entryID = :entryID";
-    $statement = $this->db->prepare(
-      "DELETE FROM entries WHERE entryID = :entryID"
-    );
+    $statement = $pdo->prepare($sql);
     $statement->execute([
       ":entryID" => $entryID
     ]);
   }
   public function postNewEntry($title, $content, $userID){
-    $statement = $this->db->prepare(
-      "INSERT INTO entries
-      (title, content, userID, createdAt)
-      VALUES (:title, :content, :userID, :createdAt)"
-    );
+    $sql=  "INSERT INTO entries
+    (title, content, userID, createdAt)
+    VALUES (:title, :content, :userID, :createdAt)";
+    $statement = $pdo($sql);
     $statement->execute([
       ":title" => $title,
       ":content" => $content,
@@ -44,9 +41,8 @@ class Entry
     ]);
   }
   public function updateEntry($title, $content, $entryID){
-    $statement = $this->db->prepare(
-      "UPDATE entries SET title = :title, content = :content WHERE entryID = :entryID"
-    );
+    $sql="UPDATE entries SET title = :title, content = :content WHERE entryID = :entryID";
+    $statement = $pdo->prepare($sql);
     $statement->execute([
       ":title" => $title,
       ":content" => $content,
