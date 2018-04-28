@@ -1,12 +1,23 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+require_once 'DataBase.php';
+
 class Entry
+
 {
- //
+  private $database;
+  function __construct($database){
+    $this->database = $database;
+  }
+
+
   public function getAllEntries($userID){
     $sql="SELECT * FROM entries
     WHERE userID = :userID
     ORDER BY createdAt DESC";
-    $statement = $pdo->prepare($sql); //?? 
+    $statement = $this->database->prepare($sql);
     $statement->execute([
       ":userID" => $userID
     ]);
@@ -15,7 +26,7 @@ class Entry
   public function getEntry($entryID){
     $sql=  "SELECT * FROM entries
     WHERE entryID = :entryID";
-    $statement = $pdo->prepare($sql);
+    $statement = $this->database->prepare($sql);
     $statement->execute([
       ":entryID" => $entryID
     ]);
@@ -23,7 +34,7 @@ class Entry
   }
   public function removeEntry($entryID){
     $sql=  "DELETE FROM entries WHERE entryID = :entryID";
-    $statement = $pdo->prepare($sql);
+    $statement = $this->database->prepare($sql);
     $statement->execute([
       ":entryID" => $entryID
     ]);
@@ -32,7 +43,7 @@ class Entry
     $sql=  "INSERT INTO entries
     (title, content, userID, createdAt)
     VALUES (:title, :content, :userID, :createdAt)";
-    $statement = $pdo($sql);
+    $statement = $this->database->prepare($sql);
     $statement->execute([
       ":title" => $title,
       ":content" => $content,
@@ -42,7 +53,7 @@ class Entry
   }
   public function updateEntry($title, $content, $entryID){
     $sql="UPDATE entries SET title = :title, content = :content WHERE entryID = :entryID";
-    $statement = $pdo->prepare($sql);
+    $statement = $this->database->prepare($sql);
     $statement->execute([
       ":title" => $title,
       ":content" => $content,

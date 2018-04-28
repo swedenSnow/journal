@@ -1,20 +1,17 @@
 <?php 
-require 'partials/session_start.php';
+require 'classes/UserCheck.php';
+$user = new User($pdo);
 require_once 'partials/head.php';
 include_once 'partials/navbar.php';
-require 'classes/UserCheck.php';
-$user = new User();
-var_dump($user->isLoggedIn());
+// var_dump($user->isLoggedIn());
 // require 'session_start.php';
 if ($user->isLoggedIn()) { 
-    include_once 'partials/get_all_entries.php'; 
+    require 'partials/get_all_entries.php'; 
+    require 'partials/post_entry.php';
 } else {
-    include_once 'partials/head.php';
-    include_once 'partials/navbar.php';
+   require 'partials/register.php';
 }
 
-// require_once 'partials/database.php';
-// require_once 'partials/login.php';
 //! Added hashed pwd with user
 // --------------------------------------------------------------------------------------
 // $hashed = password_hash("", PASSWORD_DEFAULT);
@@ -25,8 +22,6 @@ if ($user->isLoggedIn()) {
 //   ":password" => $hashed // use the hashed password when saving to SQL
 // ]);
 // --------------------------------------------------------------------------------------
-
-
  ?>
 
 

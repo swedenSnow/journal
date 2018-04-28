@@ -1,22 +1,28 @@
 <?php
-//Fail :/
-require_once 'partials/database.php';
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+require_once 'Database.php';
 class User
 {
-
+  private $database;
+  function __construct($database){
+    $this->database = $database;
+  }
+  
+  
   public function login($username, $password)
   {
-    // Prepare 
+
     $sql=  "SELECT * FROM users
     WHERE username = :username";
-    $statement = $pdo->prepare($sql);
+    $statement = $this->database->prepare($sql);
     // Execute
     $statement->execute([
       "username" => $username
     ]);
-    //Fetch
     $user = $statement->fetch();
-    // check hashed password
+      
     if (password_verify($password, $user["password"])) {
       $_SESSION["loggedIn"] = true;
       $_SESSION["username"] = $user["username"];
@@ -36,6 +42,19 @@ class User
       return false;
     }
   }
+
+  public function new_user($username, $password){
+  
+    $sql= "INSERT INTO users (username, password)
+          VALUES (:username, :password)";
+    $hashed = password_hash($password, PASSWORD_DEFAULT);
+    $statement = $this->database->prepare($sql);
+    $statement->execute([
+      ":username" => $username,
+      ":password" => $hashed
+    ]);
+  }
+
   public function logout()
   {
     session_unset();

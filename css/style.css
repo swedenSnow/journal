@@ -339,15 +339,16 @@
   [hidden] {
     display: none;
   }
-              /* END NORMALIZE */
-  /* --------------------------------------- */
+  
+  /* END NORMALIZE */
+  /* --------------------------------------------------------------------*/
 
-  /* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Lobster|Raleway|Titillium+Web'); */
   /* Fonts */
 /* font-family: 'Raleway', sans-serif;
-font-family: 'Titillium Web', sans-serif;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Lobster', cursive; */
+  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lobster', cursive; 
+*/
   *, *:after, *:before{
     margin: 0;
     padding: 0;
@@ -362,20 +363,24 @@ font-family: 'Lobster', cursive; */
 
   a {
     text-decoration: none;
+    outline-style: none;
   }
 
   header {
     display: flex;
-    flex-flow: row-wrap;
+    flex-flow: row wrap;
     min-height:60px;
     min-width: 100vw;
     background-color: #ccc;
     padding: 2rem;
     justify-content: space-around;
     font-family: 'Raleway', sans-serif;
+    margin: auto;
     
-   
-
+  }
+  nav{
+    min-width: 100%;
+    min-height: 40vh;
   }
 
   header nav ul .title{
@@ -383,7 +388,7 @@ font-family: 'Lobster', cursive; */
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 3rem;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 2px 1px black;
 
   }
   header nav ul .title:after{
@@ -391,7 +396,7 @@ font-family: 'Lobster', cursive; */
   }
 
   header nav ul .title a{
-    color: salmon;
+    color: #fafafa;
     transition: color 0.5s linear;
   }
 
@@ -400,6 +405,7 @@ font-family: 'Lobster', cursive; */
     text-shadow: 1px 2px 1px white;
     border-bottom: solid 0.1rem rgba(85, 212, 117, 0.822);
 
+
   }
 
   header nav ul li {
@@ -407,9 +413,12 @@ font-family: 'Lobster', cursive; */
     list-style-type: none;
     min-width: 100%;
   }
-  
+  /* form {
+    flex-basis: 100%;
 
-  header nav input{
+  } */
+
+  input{
     width: 200px;
     height: 30px;
     outline-style: none;
@@ -418,13 +427,23 @@ font-family: 'Lobster', cursive; */
     border-radius: 8px;
    
   }
+
+
+  header nav .nav-login{
+    min-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+  }
   header nav .nav-login button{
     color: #ccc;
     transition: color 0.5s linear;
     width: 200px;
-    height: 35px;
+    height: 33px;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 1px 1px 1px black;
   }
 
   header nav .nav-login button:hover {
@@ -433,16 +452,154 @@ font-family: 'Lobster', cursive; */
     background-color: rgba(85, 212, 117, 0.822);
   }
  
- 
+  
+  button:hover {
+    color: black;
+    transition: all 500ms ease-out;
+    background-color: rgba(85, 212, 117, 0.822);
+    
+  }
+
+  
   footer{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
   }
-
+  
   footer p {
     text-align: center;
     font-size: 70%;
-
+    
   }
 
+  .form{
+    margin: 1.5rem;
+    width: 30%;
+    height: auto;
+  }
+  .title {
+    transition: 500ms ease-in-out;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    color:  rgba(85, 212, 117, 0.822);
+    text-shadow: 1px 2px 1px white;
+    flex-basis: 100%;
+  }
+
+  .all-entries{
+    display: flex;
+    min-width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    box-shadow: 1px 1px 1px black;
+
+  }
+  .entry-title{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 2rem;
+    flex-basis: 100%;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 800;
+   
+  }
+
+  .prev-entries{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 2rem;
+    flex-basis: 100%;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  .greating-title h1{
+    text-shadow: 2px 2px 2px white;
+  }
+  
+  .container-logout{
+    min-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+  }
+  
+  .btn{
+    color: #ccc;
+    transition: color 0.5s linear;
+    width: 200px;
+    height: 33px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline-style: none;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .diff-user{
+    color: ccc;
+    transition: color 0.5s linear;
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline-style: none;
+  }
+
+  .new-entry {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .entry{
+    width: 30%;
+    height: 100%;
+  }
+  
+  .entry-form{
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  /* .entry-form input{
+    background: blue;
+  } */
+  .container{
+    display: flex;
+    flex-flow: row wrap;
+    min-height:50vh;
+    min-width: 100vw;
+    padding: 2rem;
+    justify-content: space-around;
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+  }
+
+  .register{
+    min-height: 60px;
+    min-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+
+  .container .title{
+    margin: 0.67rem 0;
+    color: rgb(118, 97, 95);
+    text-shadow: 1px 1px 1px black;
+  }
+
+  .entry-date{
+    font-size: 70%;
+  }
+
+  .para{
+    margin-bottom: 3rem;
+  }
+
+  #hide-id{
+    display: none;
+  }
