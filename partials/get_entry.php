@@ -1,3 +1,4 @@
+
 <div class="entry">
   <form class="form" action="update-entry.php" method="POST">
     <h3 class="entry-title">
@@ -10,7 +11,7 @@
         <?=$post['createdAt']; ?>
     </p>
     <input type="text" name="entryID" id="hide-id" value="<?= $post["entryID"] ?>">
-    <input type="submit" class="form-50" name="type" value="edit">
-    <input type="submit" class="form-50" name="type" value="remove">
+    <input type="submit" class="" name="edit" value="edit">
+    <input type="submit" class="" name="remove" value="remove">
   </form>
 </div>

@@ -10,7 +10,7 @@ $user=new User($pdo); ?>
                 </div>
                 <?php else:?>
                 <div class="title greating-title">
-                    <h1>Welcome<br/> <?=ucfirst( $_SESSION["username"]) ?> </h1>
+                    <h1>Welcome <?=ucfirst( $_SESSION["username"]) ?> </h1>
                 </div>
                 <?php endif ;?> 
                 <?php if(!$user->isLoggedIn()):?>
@@ -34,16 +34,3 @@ $user=new User($pdo); ?>
         </div>
     </nav>
 </header>
-
-
-
-<!-- <div class="new-entry">
-  <h2 class="title">Post a new Entry</h2>
-  <form class="form newEntry" action="partials/post_entry.php" method="POST">
-    <input type="text" name="title" placeholder="Title">
-    <br>
-    <textarea name="content" placeholder="Content"></textarea>
-    <br>
-    <input type="submit" value="Submit">
-  </form>
-</div> -->

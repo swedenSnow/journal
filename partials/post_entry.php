@@ -1,7 +1,7 @@
 </div>
 <section>
     <div class="new-entry"> 
-        <h2 class="title entry-title">Post a new Entry</h2>
+        <h2 class="title entry-header">Post a new Entry</h2>
         <form action="partials/saved_entry.php" method="POST" class="form entry-form">
             <input type="text" name="title" placeholder="Title"> 
             <br/>

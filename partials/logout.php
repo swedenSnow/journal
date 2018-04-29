@@ -6,4 +6,4 @@ require '../classes/UserCheck.php';
 require 'session_start.php';
 $user = new User($pdo);
 $user->logout();
-header("Location: ../index.php?message=You are no longer logged in");
+header("Location: ../index.php?message=You_are_logged_out");
