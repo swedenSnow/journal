@@ -464,13 +464,28 @@
     border-radius: 8px;
     color: #ccc;
   }
-  .all-entries input:hover {
+  .edit-post:hover {
     color: black;
     transition: all 500ms ease-out;
     background-color: rgba(85, 212, 117, 0.822);
     cursor: pointer;
     
   }
+
+  .remove-post {
+    color: white;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    background-color: rgba(255, 17, 97, 0.822);
+
+  }
+
+  .remove-post:hover{
+    color: black;
+    transition: all 500ms ease-out;
+    background-color: rgba(255, 17, 97, 0.822);
+    cursor: pointer;
+  } 
 
   footer{
     display: flex;
@@ -489,14 +504,6 @@
     
   }
 
-  .form{
-    padding: 1rem;
-    width: 33.33%;
-    height: auto;
-    margin: auto;
-
-    
-  }
   .title {
     transition: 500ms ease-in-out;
     text-align: center;
@@ -519,21 +526,21 @@
 
 
   .entry-title{
-    margin-bottom: 0.7rem;
+    margin-bottom: 1.5rem;
     flex-basis: 100%;
     color: black;
     text-transform: uppercase;
     border-bottom: 2px solid white;
-   
+    width: 40%;
   }
+
+
 
   .prev-entries{
     margin-bottom: 2rem;
     flex-basis: 100%;
     color: white;
     text-shadow: 1px 0 1px darkgrey;
-    /* text-transform: uppercase; */
-    /* border: 1px solid brown; */
     background: grey;
     padding: 2rem;
 }
@@ -579,7 +586,18 @@
 
   .entry{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    flex-basis: 50%;
+    padding: 2rem;
+    border: 1px dashed black;
+  }
+
+
+  .form{
+    padding: 1rem;
+    width: 50%;
+    height: auto;
+    margin: auto;
   }
   
   .entry-form{
@@ -633,6 +651,7 @@
   }
 
   .entry-date{
+    width:40%;
     font-size: 70%;
     border-bottom: 1px solid white;
     margin-bottom: 0.4rem;
