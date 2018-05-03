@@ -9,7 +9,10 @@ class User
   function __construct($database){
     $this->database = $database;
   }
-  
+  // Preserve input text
+  public function mynl2br($text) { 
+    return strtr($text, array("\r\n" => '<br />', "\r" => '<br />', "\n" => '<br />')); 
+ }
   
   public function login($username, $password)
   {

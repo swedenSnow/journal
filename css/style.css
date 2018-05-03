@@ -464,12 +464,16 @@
     border-radius: 8px;
     color: #ccc;
   }
+
+  /* .edit-post{
+   
+  } */
+
   .edit-post:hover {
     color: black;
     transition: all 500ms ease-out;
-    background-color: rgba(85, 212, 117, 0.822);
-    cursor: pointer;
-    
+    background-color: mediumpurple;
+    cursor: pointer;  
   }
 
   .remove-post {
@@ -483,7 +487,7 @@
   .remove-post:hover{
     color: black;
     transition: all 500ms ease-out;
-    background-color: rgba(255, 17, 97, 0.822);
+    background-color: rgb(255, 17, 17);
     cursor: pointer;
   } 
 
@@ -509,22 +513,18 @@
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 3rem;
-    color:  #ebf8e1;
+    color:  whitesmoke;
     flex-basis: 100%;
   }
 
   .all-entries{
     display: flex;
     min-width: 100%;
-    background: linear-gradient(0.13turn, #5b5b5b, #ebf8e1, #b7ab9d);
+    /* background: linear-gradient(0.13turn, #5b5b5b, #ebf8e1, #b7ab9d); */
     flex-flow: row wrap;
     justify-content: center;
     box-shadow: 1px 1px 1px black;
-    
-
   }
-
-
   .entry-title{
     margin-bottom: 1.5rem;
     flex-basis: 100%;
@@ -533,11 +533,8 @@
     border-bottom: 2px solid white;
     width: 40%;
   }
-
-
-
+  
   .prev-entries{
-    margin-bottom: 2rem;
     flex-basis: 100%;
     color: white;
     text-shadow: 1px 0 1px darkgrey;
@@ -582,35 +579,43 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin: auto;
   }
 
-  .entry{
+  .entry {
     width: 100%;
     min-height: 100%;
-    flex-basis: 50%;
+    flex-basis: 49%;
     padding: 2rem;
     border: 1px dashed black;
-  }
-
+    margin: 1rem auto;
+}
 
   .form{
     padding: 1rem;
-    width: 50%;
     height: auto;
-    margin: auto;
+    margin: 0;
+    padding: 1rem;
+  
   }
   
   .entry-form{
     display: flex;
     flex-flow: column wrap;
+    margin: auto;
+    width: 50%;
   }
 
   .entry-form textarea{
    border-radius: 8px;
    min-height: 250px;
+   min-width: 200px;
    padding: 0.6rem;
+   width: 100%;
   }
-
+  /* pre {
+    font-family: 'Raleway';
+  } */
   .entry-form button{
     align-self: center;
   }
@@ -648,6 +653,23 @@
     margin: 0.67rem 0;
     color: rgb(118, 97, 95);
     text-shadow: 1px 1px 1px black;
+  }
+
+  .new-entry-edit {
+    display: flex;
+    min-height: 35vh;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    background-color: #808080;
+  }
+ 
+
+  .form-wrapper{
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-end;
   }
 
   .entry-date{

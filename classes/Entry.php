@@ -54,11 +54,10 @@ class Entry
   public function updateEntry($title, $content, $entryID){
     $sql="UPDATE entries SET title = :title, content = :content WHERE entryID = :entryID";
     $statement = $this->database->prepare($sql);
-    $result = $statement->execute([
+    $statement->execute([
       ":title" => $title,
       ":content" => $content,
       ":entryID" => $entryID
     ]);
-    var_dump($title . $content . $entryID);
   }
 }

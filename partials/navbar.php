@@ -1,5 +1,6 @@
                     
-<?php require_once 'classes/UserCheck.php';
+<?php 
+require_once 'classes/UserCheck.php';
 $user=new User($pdo); ?>
 <header>
     <nav>
@@ -20,8 +21,7 @@ $user=new User($pdo); ?>
                         <input type="password" name="password" placeholder="Password">
                         <button type="submit" name="submit">Login</button>   
                     </form>
-
-                    <?php else:?>
+                <?php else:?>
                     <div class = 'container-logout'>
                         <form action="partials/logout.php" method="POST">
                         <button name="diff-user" class='btn diff-user'>Diffrent user?</button>                        
