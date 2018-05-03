@@ -1,6 +1,6 @@
 <?php
 
-
+require_once '../classes/DataBase.php';
 require_once '../classes/UserCheck.php';
 $user = new User($pdo);
 
@@ -22,14 +22,6 @@ if(isset($_POST['submit'])){
     }
     
 }
-
-// if(isset($_POST['submit'])){
-//     if (!$user->login($_POST["username"], $_POST["password"])) {
-//         echo '<h1>FAIL</h1>';
-//     }
-// }
-
-
 ?>
 
 
