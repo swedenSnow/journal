@@ -3,7 +3,8 @@
 <img width="1544" alt="journal_screenshot" src="https://user-images.githubusercontent.com/31956031/39398909-289d3cf4-4b15-11e8-9948-8ed7db5111d4.png">
 
 # Individuell - Personlig Journal
-> Skapa en personlig journal med PHP & MySQL
+> Skapa en personlig journal med PHP & MySQL.
+>> https://github.com/swedenSnow/journal
 
 # Krav
 * I inloggat läge ska man kunna se alla sina tidigare inlägg och det ska finnas ett formulär där man kan skapa ett nytt inlägg med en titel och ett innehåll. När man lägger till det nya inlägget via formuläret så laddas sidan (eller läggs till med JavaScript) om och i listan av inlägg finns det nya inlägget.
