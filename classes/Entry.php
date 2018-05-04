@@ -59,4 +59,8 @@ class Entry
       ":entryID" => $entryID
     ]);
   }
+
+//   public function mynl2br($text) { 
+//     return strtr($text, array("\r\n" => '<br />', "\r" => '<br />', "\n" => '<br />')); 
+//  } 
 }

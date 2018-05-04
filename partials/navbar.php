@@ -26,8 +26,8 @@ $user=new User($pdo); ?>
                         <form action="partials/logout.php" method="POST">
                         <button name="diff-user" class='btn diff-user'>Diffrent user?</button>                        
                         <button name="logout" class='btn logout'>Log out</button>                   
-                    </form>
-                </div>
+                        </form>
+                    </div>
                 </div>
                 <?php endif ; ?>
             </ul>
