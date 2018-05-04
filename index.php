@@ -10,9 +10,10 @@ if ($user->isLoggedIn()) {
     require 'partials/post_entry.php';
 } else {
    require 'partials/register.php';
-}
+}?>
+<?php include_once 'partials/footer.php' ?>
 
-//! Added hashed pwd with user
+<!-- //! Added hashed pwd with user
 // --------------------------------------------------------------------------------------
 // $hashed = password_hash("", PASSWORD_DEFAULT);
 // $sql = 'INSERT INTO users (username, password) VALUES (:username, :password)';
@@ -21,10 +22,4 @@ if ($user->isLoggedIn()) {
 //   ":username" => "banani",
 //   ":password" => $hashed // use the hashed password when saving to SQL
 // ]);
-// --------------------------------------------------------------------------------------
- ?>
-
-
-
-
-<?php include_once 'partials/footer.php' ?>
+// -------------------------------------------------------------------------------------- -->

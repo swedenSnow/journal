@@ -5,13 +5,11 @@ if (session_status() == PHP_SESSION_NONE) {
 require_once 'DataBase.php';
 
 class Entry
-
 {
   private $database;
   function __construct($database){
     $this->database = $database;
   }
-
 
   public function getAllEntries($userID){
     $sql="SELECT * FROM entries
@@ -55,6 +53,7 @@ class Entry
     $sql="UPDATE entries SET title = :title, content = :content WHERE entryID = :entryID";
     $statement = $this->database->prepare($sql);
     $statement->execute([
+      
       ":title" => $title,
       ":content" => $content,
       ":entryID" => $entryID

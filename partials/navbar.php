@@ -17,8 +17,8 @@ $user=new User($pdo); ?>
                 <?php if(!$user->isLoggedIn()):?>
                 <div class="nav-login">
                     <form action="partials/login.php" method="POST">
-                        <input type="text" name="username" placeholder="Username">
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="password" name="password" placeholder="Password" required>
                         <button type="submit" name="submit">Login</button>   
                     </form>
                 <?php else:?>

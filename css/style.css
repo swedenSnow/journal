@@ -384,7 +384,8 @@
   }
 
   header nav ul .title{
-    transition: 500ms ease-in-out;
+    /* transition: 0.5s cubic-bezier(1, 0.6, 0.3, 1.31); */
+    transition: 500ms cubic-bezier(1, 1.53, 0, 1.61);
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 3rem;
@@ -465,10 +466,6 @@
     color: #ccc;
   }
 
-  /* .edit-post{
-   
-  } */
-
   .edit-post:hover {
     color: black;
     transition: all 500ms ease-out;
@@ -513,7 +510,7 @@
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 3rem;
-    color:  whitesmoke;
+    color:  white;
     flex-basis: 100%;
   }
 
@@ -523,7 +520,6 @@
     /* background: linear-gradient(0.13turn, #5b5b5b, #ebf8e1, #b7ab9d); */
     flex-flow: row wrap;
     justify-content: center;
-    box-shadow: 1px 1px 1px black;
   }
   .entry-title{
     margin-bottom: 1.5rem;
@@ -543,7 +539,7 @@
 }
 
   .greating-title h1{
-    text-shadow: 2px 2px 2px grey;
+    text-shadow: 1px 1px 1px black;
   }
   
   .container-logout{
@@ -565,8 +561,14 @@
     box-shadow: 1px 1px 1px black;
   }
 
+  button.new-user:hover {
+    background-color: mediumpurple;
+    color: black;
+  }
+
+
   .diff-user{
-    color: ccc;
+    /* color: #ccc; */
     transition: color 0.5s linear;
     width: 200px;
     height: 35px;
@@ -627,8 +629,19 @@
     text-shadow: 1px 0 1px darkgrey;
     background: grey;
     padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 1px 1px 1px black;
   }
 
+  .entry-header-edit{
+    margin-bottom: 2rem;
+    flex-basis: 100%;
+    color: mediumpurple;
+    text-shadow: 1px 1px 1px white;
+    background: grey;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
   .container{
     display: flex;
     flex-flow: row wrap;
@@ -651,7 +664,7 @@
 
   .container .title{
     margin: 0.67rem 0;
-    color: rgb(118, 97, 95);
+    color: mediumpurple;
     text-shadow: 1px 1px 1px black;
   }
 
