@@ -1,6 +1,7 @@
 ## Screenshot
 
-<img width="1544" alt="journal_screenshot" src="https://user-images.githubusercontent.com/31956031/39398909-289d3cf4-4b15-11e8-9948-8ed7db5111d4.png">
+<img width="1662" alt="screenshot_journal" src="https://user-images.githubusercontent.com/31956031/39628409-4beb1648-4fa9-11e8-9b01-e3a6a21d4956.png">
+
 
 # Individuell - Personlig Journal
 > Skapa en personlig journal med PHP & MySQL.
