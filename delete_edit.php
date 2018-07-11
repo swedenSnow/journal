@@ -2,9 +2,9 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
   }
-require_once 'classes/UserCheck.php';
+require_once 'classes/User.php';
 require_once 'classes/Entry.php';
-require_once 'classes/DataBase.php';
+require_once 'classes/Database.php';
 require_once 'partials/head.php'; 
 $user = new User($pdo);
 $entries = new Entry($pdo);

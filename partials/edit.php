@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/DataBase.php';
+require_once '../classes/Database.php';
 require_once '../classes/Entry.php';
 $entry = new Entry($pdo);
 $entryID = $_POST['entryID'];

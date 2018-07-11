@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
-require_once 'DataBase.php';
+require_once 'Database.php';
 
 class Entry
 {

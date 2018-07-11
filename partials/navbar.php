@@ -1,6 +1,5 @@
-                    
 <?php 
-require_once 'classes/UserCheck.php';
+require_once 'classes/User.php';
 $user=new User($pdo); ?>
 <header>
     <nav>

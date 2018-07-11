@@ -1,10 +1,9 @@
 <?php 
-require 'classes/UserCheck.php';
-$user = new User($pdo);
+require 'classes/User.php';
 require_once 'partials/head.php';
 include_once 'partials/navbar.php';
-// var_dump($user->isLoggedIn());
-// require 'session_start.php';
+$user = new User($pdo);
+
 if ($user->isLoggedIn()) { 
     require 'partials/get_all_entries.php'; 
     require 'partials/post_entry.php';
@@ -13,13 +12,4 @@ if ($user->isLoggedIn()) {
 }?>
 <?php include_once 'partials/footer.php' ?>
 
-<!-- //! Added hashed pwd with user
-// --------------------------------------------------------------------------------------
-// $hashed = password_hash("", PASSWORD_DEFAULT);
-// $sql = 'INSERT INTO users (username, password) VALUES (:username, :password)';
-// $statement =$pdo->prepare($sql);
-// $statement->execute([
-//   ":username" => "banani",
-//   ":password" => $hashed // use the hashed password when saving to SQL
-// ]);
-// -------------------------------------------------------------------------------------- -->
+<!-- //! Added hashed pwd with user -->

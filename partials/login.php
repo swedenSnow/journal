@@ -1,6 +1,6 @@
 <?php
-require_once '../classes/DataBase.php';
-require_once '../classes/UserCheck.php';
+require_once '../classes/Database.php';
+require_once '../classes/User.php';
 $user = new User($pdo);
 
 if(isset($_POST['submit'])){

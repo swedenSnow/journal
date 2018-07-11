@@ -1,6 +1,6 @@
 <?php
-require_once '../classes/UserCheck.php';
-require_once '../classes/DataBase.php';
+require_once '../classes/User.php';
+require_once '../classes/Database.php';
 $user = new User($pdo);
 $user->new_user($_POST["username"], $_POST["password"]);
 $user->login($_POST["username"], $_POST["password"]);
